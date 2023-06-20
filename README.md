@@ -30,19 +30,27 @@ To set up the Django project, follow the steps below:
 ### Main Functions<a name="main-functions"></a>
 The Django project includes the following main functions:
 
-1. **Function 1** - [Provide a brief description of the function's purpose]
+1. **product_list(request)** - [Renders a list of products]
    - Syntax:
-     ```python
-     [function_syntax]
-     ```
+    def product_list(request):
+      products = Product.objects.all()
+      return render(request, 'myapp/product_list.html', {'products': products})
 
-2. **Function 2** - [Provide a brief description of the function's purpose]
+
+2. **product_detail(request, pk)** - [Renders the details of a specific produc]
    - Syntax:
-     ```python
-     [function_syntax]
-     ```
+  def product_detail(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    return render(request, 'myapp/product_detail.html', {'product': product})
+    
+3. **add_product(request)** - [Handles the form submission to add a new product]
+   - Syntax:
+  def product_detail(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    return render(request, 'myapp/product_detail.html', {'product': product})
 
-[Add more main functions if applicable]
+
+
 
 ### Functionalities<a name="functionalities"></a>
 The Django project provides the following functionalities:
@@ -100,15 +108,11 @@ This section provides the expected output for the main functions and user-define
 
 2. **Function 2** - [Provide an example output or expected result]
 
-[Add more main function outputs if applicable]
+
 
 ### User-Defined Function Outputs
 1. **User Function 1** - [Provide an example output or expected result]
 
 2. **User Function 2** - [Provide an example output or expected result]
 
-[Add more user-defined function outputs if applicable]
 
----
-
-Please note that this documentation provides an overview of the project and its components. For detailed implementation and code structure, refer to the project's source code and inline comments.
