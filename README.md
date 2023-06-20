@@ -98,7 +98,7 @@ To run the Django project locally, perform the following steps:
 
 1. Navigate to the project directory:
    ```bash
-   cd <project_directory>
+   cd <myproject>
    ```
 
 2. Apply database migrations:
@@ -113,21 +113,27 @@ To run the Django project locally, perform the following steps:
 
 4. Access the project in a web browser at `http://localhost:8000/`.
 
-[Add any additional steps required to run the project]
 
 ## Function Outputs<a name="function-outputs"></a>
 This section provides the expected output for the main functions and user-defined functions:
 
 ### Main Function Outputs
-1. **Function 1** - [Provide an example output or expected result]
+1. **Function: product_list(request)** 
+Example Output: The product_list function renders the product_list.html template and passes a dictionary containing the products to the template for rendering.
 
-2. **Function 2** - [Provide an example output or expected result]
+2. **Function: product_detail(request, pk)** 
+Example Output: The product_detail function renders the product_detail.html template and passes a dictionary containing the product to the template for rendering.
+
+2. **Function: add_product(request)** 
+Example Output: Upon successful form submission, the function creates a new Product object with the provided information and saves it to the database. It then redirects the user to the homepage.
 
 
 
 ### User-Defined Function Outputs
-1. **User Function 1** - [Provide an example output or expected result]
+1. **Function: user_directory_path(instance, filename)**
+Example Output: If instance is an instance of the Product model and filename is "example.jpg", the function would return "product_photos/example.jpg".
 
-2. **User Function 2** - [Provide an example output or expected result]
+2. **Function: str(self)** 
+Example Output: If the name of the product is "Example Product", the function would return "Example Product".
 
 
